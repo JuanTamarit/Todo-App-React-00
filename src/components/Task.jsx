@@ -1,11 +1,16 @@
 import React from "react";
 import "./Task.css";
+import { useContext } from "react";
+import TaskContext from "../TaskContext";
 
-export default function (props) {
+function Task() {
+  const [newTaskText, setNewTaskText] = useContext(TaskContext);
   return (
     <div className="task">
       <input type="checkbox" />
-      <span>{props.name}</span>
+      <span>{newTaskText}</span>
     </div>
   );
 }
+
+export default Task;
