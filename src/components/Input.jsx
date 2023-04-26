@@ -13,11 +13,12 @@ function Input(props) {
   return (
     <div className="input__component">
       <input
+        className=""
         type="text"
-        placeholder="Introduce una nueva tarea"
+        placeholder="¡Vamos, haz algo útil con tu vida!"
         ref={inputRef}
       />
-      <button className="new-task-button" onClick={saveTask}>
+      <button className="btn-primary" onClick={saveTask}>
         Añadir tarea
       </button>
     </div>

@@ -1,3 +1,27 @@
 .task {
     text-align: center;
 }
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none; 
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 0.4rem;
+    border: 1px solid black;
+    background-color: #fff;
+    outline: none; /* Para evitar un borde en los navegadores */
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  input[type="checkbox"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+  label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }

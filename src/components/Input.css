@@ -1,6 +1,33 @@
 .input__component {
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
-    justify-content: center;    
+    gap: 1rem;
+    justify-content: center;   
+    margin: 3.2rem; 
 }
+
+input {
+    border: 0;
+    border-bottom: 0.125rem solid;
+    font-size: 3.2rem;
+    font-family: 'Schoolbell', cursive;
+    width: 64rem;
+}
+
+input:focus {
+    outline: none;
+    border: 0;
+    border-bottom: 0.125rem solid;
+    font-size: 3.2rem;
+    font-family: 'Schoolbell', cursive;
+}
+
+.btn-primary {
+    font-family: 'Schoolbell', cursive;
+    background-color: transparent;
+    border: 0.125rem solid;
+    border-radius: 1rem;
+    font-size: 3.2rem;
+    padding: 1rem;
+} 
+

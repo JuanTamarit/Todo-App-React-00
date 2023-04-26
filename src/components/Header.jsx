@@ -6,7 +6,8 @@ export default function Header() {
     <header className="header">
       <span className="">¿Qué es el exito?</span>
       <span>"Es poder irse a la cama cada noche con el alma en paz"</span>
-      <span>Paulo Coelho</span>
+      <span>✨Paulo Coelho✨</span>
+      <span>🦄</span>
     </header>
   );
 }
