@@ -1,11 +1,13 @@
 import React from "react";
 import "./Task.css";
 
-export default function (props) {
+function Task(props) {
   return (
     <div className="task">
       <input type="checkbox" />
-      <span>{props.name}</span>
+      <span>{props.task}</span>
     </div>
   );
 }
+
+export default Task;
