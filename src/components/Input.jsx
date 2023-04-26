@@ -1,17 +1,12 @@
 import "./Input.css";
-import React, { useRef, useContext } from "react";
-import TaskContext from "../TaskContext";
-import Task from "./Task";
+import React, { useRef } from "react";
 
-function Input() {
+function Input(props) {
   const inputRef = useRef(null);
-  const { tasksArray, setTasksArray } = useContext(TaskContext);
 
   function saveTask() {
     const inputText = inputRef.current.value;
-    tasksArray.push(inputText);
-    console.log(tasksArray);
-    setTasksArray(tasksArray);
+    props.setTasksArray([...props.tasksArray, inputText]);
     inputRef.current.value = "";
   }
 
@@ -25,11 +20,6 @@ function Input() {
       <button className="new-task-button" onClick={saveTask}>
         Añadir tarea
       </button>
-      <div>
-        {tasksArray.map((item, index) => (
-          <Task key={index} task={item} />
-        ))}
-      </div>
     </div>
   );
 }

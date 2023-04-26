@@ -7,12 +7,17 @@ import Input from "./components/Input";
 import Task from "./components/Task";
 
 function App() {
+  const [tasksArray, setTasksArray] = useState([]);
+
   return (
     <>
       <Header />
-      <Header />
-
-      <Input />
+      <Input tasksArray={tasksArray} setTasksArray={setTasksArray} />
+      <div>
+        {tasksArray.map((item, index) => (
+          <Task key={index} task={item} />
+        ))}
+      </div>
     </>
   );
 }
