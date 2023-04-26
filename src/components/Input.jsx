@@ -7,9 +7,10 @@ function Input() {
   const { tasksArray, setTasksArray } = useContext(TaskContext);
 
   function saveTask() {
-    const newTasksArray = [...tasksArray, inputRef.current.value];
-    setTasksArray(newTasksArray);
-    localStorage.setItem("tasksArray", JSON.stringify(newTasksArray));
+    const inputText = inputRef.current.value;
+    tasksArray.push(inputText);
+    console.log(tasksArray);
+    setTasksArray(tasksArray);
     inputRef.current.value = "";
   }
 
