@@ -26,8 +26,8 @@ function Input() {
         Añadir tarea
       </button>
       <div>
-        {tasksArray.map((item) => (
-          <Task task={item} />
+        {tasksArray.map((item, index) => (
+          <Task key={index} task={item} />
         ))}
       </div>
     </div>

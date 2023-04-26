@@ -11,7 +11,6 @@ function App() {
     <>
       <Header />
       <Input />
-      <Task name="Comprar tortilla" />
     </>
   );
 }
