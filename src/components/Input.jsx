@@ -1,6 +1,6 @@
 import "./Input.css";
 import React, { useRef, useContext } from "react";
-import { TaskContext } from "../TaskContext";
+import TaskContext from "../TaskContext";
 
 function Input() {
   const inputRef = useRef(null);
