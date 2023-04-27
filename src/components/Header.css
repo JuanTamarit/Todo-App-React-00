@@ -1,7 +1,8 @@
 .header {
     background-color: pink;
-    font-size: 1.6rem;
+    font-size: 3.2rem;
     display: flex;
     flex-direction: column;
-    text-align: center
+    text-align: center;
+    padding: 3.2rem;
 };
