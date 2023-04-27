@@ -12,7 +12,7 @@ function Task(props) {
 
   function handleLabelClass() {
     if (labelRef.current) {
-      labelRef.current.classList.toggle("completed-task", isChecked);
+      labelRef.current.classList.toggle("completed-task", !isChecked);
     }
   }
 
