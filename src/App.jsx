@@ -28,11 +28,17 @@ function App() {
   return (
     <>
       <Header />
-      <div className="nav">
-        <button onClick={handleAllClick}>All</button>
-        <button onClick={handleActiveClick}>Active</button>
-        <button onClick={handleCompletedClick}>Completed</button>
-      </div>
+      <ul className="nav">
+        <li>
+          <button onClick={handleAllClick}>All</button>
+        </li>
+        <li>
+          <button onClick={handleActiveClick}>Active</button>
+        </li>
+        <li>
+          <button onClick={handleCompletedClick}>Completed</button>
+        </li>
+      </ul>
       <Input tasksArray={tasksArray} setTasksArray={setTasksArray} />
       <div>
         {tasksArray

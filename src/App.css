@@ -10,3 +10,11 @@ body {
   font-family: 'Schoolbell', cursive;
   font-size: 3.2rem;
 }
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+}
+

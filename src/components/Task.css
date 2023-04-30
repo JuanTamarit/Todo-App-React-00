@@ -16,8 +16,7 @@ input[type="checkbox"] {
   }
 
   input[type="checkbox"]:checked {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: green;
   }
 
   label {
