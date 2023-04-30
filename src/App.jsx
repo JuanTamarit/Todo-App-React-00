@@ -11,16 +11,43 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [tasksArray, setTasksArray] = useState([]);
+  const [filter, setFilter] = useState("all");
+
+  const handleAllClick = () => {
+    setFilter("all");
+  };
+
+  const handleActiveClick = () => {
+    setFilter("active");
+  };
+
+  const handleCompletedClick = () => {
+    setFilter("completed");
+  };
 
   return (
     <>
       <Header />
-      <Nav />
+      <div className="nav">
+        <button onClick={handleAllClick}>All</button>
+        <button onClick={handleActiveClick}>Active</button>
+        <button onClick={handleCompletedClick}>Completed</button>
+      </div>
       <Input tasksArray={tasksArray} setTasksArray={setTasksArray} />
       <div>
-        {tasksArray.map((item, index) => (
-          <Task key={index} task={item} />
-        ))}
+        {tasksArray
+          .filter((item) => {
+            if (filter === "active") {
+              return !item.checked;
+            } else if (filter === "completed") {
+              return item.checked;
+            } else {
+              return true;
+            }
+          })
+          .map((item, index) => (
+            <Task key={index} task={item} />
+          ))}
       </div>
       <Routes>
         <Route path="/completed" element={<Completed />} />
