@@ -8,6 +8,7 @@ import Task from "./components/Task";
 import Nav from "./components/Nav";
 import Completed from "./components/Completed";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import TaskContext from "./TaskContext";
 
 function App() {
   const [tasksArray, setTasksArray] = useState([]);

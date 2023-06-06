@@ -6,7 +6,10 @@ function Input(props) {
 
   function saveTask() {
     const inputText = inputRef.current.value;
-    props.setTasksArray([...props.tasksArray, inputText]);
+    props.setTasksArray([
+      ...props.tasksArray,
+      { text: inputText, checked: false },
+    ]);
     inputRef.current.value = "";
   }
 

@@ -21,11 +21,11 @@ function Task(props) {
       <input
         type="checkbox"
         id={props.task.id}
-        checked={isChecked}
+        checked={props.task.status == "completed"}
         onChange={handleCheckboxChange}
       />
       <label htmlFor={props.task.id} ref={labelRef}>
-        {props.task}
+        {props.task.text}
       </label>
     </div>
   );
